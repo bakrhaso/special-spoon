@@ -54,6 +54,7 @@ modules:
   - type: script
     scripts:
       - post-install-1password.sh
+      - post-install-zen-browser.sh
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
