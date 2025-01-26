@@ -34,7 +34,6 @@ modules:
       - terra.repo
     install:
       - micro # terminal text editor
-      - zen-browser # browser based on firefox
       - zed # code editor
       - ranger # terminal file explorer
       - bat # cat alternative
