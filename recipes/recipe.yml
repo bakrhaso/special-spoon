@@ -22,9 +22,9 @@ modules:
       - source: system
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
 
-  # - type: script
-  #   scripts:
-  #     - install-1password.sh
+  - type: bling
+    install:
+      - 1password
 
   - type: rpm-ostree
     repos:
@@ -50,11 +50,6 @@ modules:
       - containerd.io # docker
       - docker-buildx-plugin # docker
       - docker-compose-plugin # docker
-
-  - type: script
-    scripts:
-      - post-install-1password.sh
-      - post-install-zen-browser.sh
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
