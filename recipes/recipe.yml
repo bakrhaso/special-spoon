@@ -24,7 +24,7 @@ modules:
 
   - type: bling
     install:
-      - 1password
+      - 1password # password manager
 
   - type: rpm-ostree
     repos:
@@ -32,8 +32,6 @@ modules:
       - _copr:copr.fedorainfracloud.org:sneexy:zen-browser.repo
       - docker-ce.repo
       - terra.repo
-    keys:
-      - https://downloads.1password.com/linux/keys/1password.asc
     install:
       - micro # terminal text editor
       - zen-browser # browser based on firefox
