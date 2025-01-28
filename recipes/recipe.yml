@@ -29,7 +29,6 @@ modules:
   - type: rpm-ostree
     repos:
       - 1password.repo
-      - _copr:copr.fedorainfracloud.org:sneexy:zen-browser.repo
       - docker-ce.repo
       - terra.repo
     install:
