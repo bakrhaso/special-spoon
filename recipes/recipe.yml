@@ -46,6 +46,7 @@ modules:
       - containerd.io # docker
       - docker-buildx-plugin # docker
       - docker-compose-plugin # docker
+      - firefox # replace flatpak version so 1pass integration works
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
@@ -57,11 +58,14 @@ modules:
         - com.github.johnfactotum.Foliate # e-book reader
         - com.github.tchx84.Flatseal # customize flatpaks (like setting jellyfin media player to not use wayland)
         - com.spotify.Client # for streaming music
+      remove:
+        - org.mozilla.firefox
     user: {} # Also add Flathub user repo, but no user packages
 
-  - type: script
-    snippets:
-      - systemctl enable docker.socket
-      - systemctl enable tailscaled
+  - type: systemd
+    system:
+      enabled:
+        - docker.socket
+        - tailscaled
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
