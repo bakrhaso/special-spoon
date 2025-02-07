@@ -68,4 +68,9 @@ modules:
         - docker.socket
         - tailscaled
 
+  - type: script
+    snippets:
+      # Stop RPM Firefox from screwing with the homepage by deleting all lines containing their startpage URL
+      - sed -i '/start.fedoraproject.org/d' /usr/lib64/firefox/browser/defaults/preferences/firefox-redhat-default-prefs.js
+
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
