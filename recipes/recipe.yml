@@ -58,6 +58,7 @@ modules:
         - com.github.johnfactotum.Foliate # e-book reader
         - com.github.tchx84.Flatseal # customize flatpaks (like setting jellyfin media player to not use wayland)
         - com.spotify.Client # for streaming music
+        - com.heroicgameslauncher.hgl # game launcher aggregator (gog and epic in one place)
       remove:
         - org.mozilla.firefox
     user: {} # Also add Flathub user repo, but no user packages
