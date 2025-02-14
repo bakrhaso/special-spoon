@@ -31,9 +31,11 @@ modules:
       - 1password.repo
       - docker-ce.repo
       - terra.repo
+      - vscode.repo
     install:
       - micro # terminal text editor
       - zed # code editor
+      - code # code editor, added for devcontainers
       - ranger # terminal file explorer
       - bat # cat alternative
       - eza # ls alternative
