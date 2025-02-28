@@ -30,6 +30,7 @@ modules:
     repos:
       - 1password.repo
       - docker-ce.repo
+      - ghostty.repo
       - terra.repo
       - vscode.repo
     install:
@@ -49,6 +50,8 @@ modules:
       - docker-buildx-plugin # docker
       - docker-compose-plugin # docker
       - firefox # replace flatpak version so 1pass integration works
+      - ghostty # new fancy terminal emulator
+      - terminator # old reliable terminal emulator
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
