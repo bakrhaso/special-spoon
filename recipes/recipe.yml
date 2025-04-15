@@ -59,11 +59,15 @@ modules:
       # If no repo information is specified, Flathub will be used by default
       install:
         - com.discordapp.Discord # chat program
+        - dev.vencord.Vesktop # discord client "fork", but supports screen sharing
         - com.github.iwalton3.jellyfin-media-player # media player to stream from a jellyfin media server
         - com.github.johnfactotum.Foliate # e-book reader
         - com.github.tchx84.Flatseal # customize flatpaks (like setting jellyfin media player to not use wayland)
         - com.spotify.Client # for streaming music
         - com.heroicgameslauncher.hgl # game launcher aggregator (gog and epic in one place)
+        - com.github.PintaProject.Pinta # painting program
+        - com.obsproject.Studio # for streaming from my computer (e.g. to twitch)
+        - com.usebottles.bottles # manage wine "flasks"
       remove:
         - org.mozilla.firefox # installed via rpm
         # remove all the preinstalled stuff i don't care about
