@@ -54,6 +54,7 @@ modules:
       - ghostty # new fancy terminal emulator
       - terminator # old reliable terminal emulator
       - niri # scrollable tiling window manager
+      - xwayland-satellite # to launch x11 programs under niri
       - copyq # clipboard manager (required for seamless x11-wayland clipboard communication)
 
   - type: default-flatpaks
