@@ -33,7 +33,7 @@ modules:
       - ghostty.repo
       - terra.repo
       - vscode.repo
-      - niri.repo
+      - niri-git.repo
     install:
       - micro # terminal text editor
       - zed # code editor
