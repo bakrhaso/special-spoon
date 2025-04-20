@@ -51,8 +51,9 @@ modules:
       - docker-buildx-plugin # docker
       - docker-compose-plugin # docker
       - firefox # replace flatpak version so 1pass integration works
-      - ghostty # new fancy terminal emulator
-      - terminator # old reliable terminal emulator
+      - foot # simple wayland terminal
+      - ghostty # new fancy terminal
+      - terminator # old reliable terminal
       - niri # scrollable tiling window manager
       - xwayland-satellite # to launch x11 programs under niri
       - fuzzel # application launcher
