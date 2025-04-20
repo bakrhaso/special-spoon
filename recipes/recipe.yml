@@ -56,7 +56,8 @@ modules:
       - niri # scrollable tiling window manager
       - xwayland-satellite # to launch x11 programs under niri
       - fuzzel # application launcher
-      - copyq # clipboard manager (required for seamless x11-wayland clipboard communication)
+      - copyq # clipboard manager
+      - xclip # x11 clipboard, required by https://github.com/alexankitty/clipsync
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
