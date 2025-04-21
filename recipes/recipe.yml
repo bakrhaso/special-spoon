@@ -58,7 +58,7 @@ modules:
       - xwayland-satellite # to launch x11 programs under niri
       - fuzzel # application launcher
       - lxpolkit # niri needs a polkit
-      - proton-pass-1.31.1-1.x86_64.rpm # proton password manager
+      - copyq # clipboard manager
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
