@@ -57,7 +57,7 @@ modules:
       - niri # scrollable tiling window manager
       - xwayland-satellite # to launch x11 programs under niri
       - fuzzel # application launcher
-      - polkit-kde # niri needs a polkit
+      - lxpolkit # niri needs a polkit
       - proton-pass-1.31.1-1.x86_64.rpm # proton password manager
 
   - type: default-flatpaks
