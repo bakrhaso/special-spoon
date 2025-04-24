@@ -59,6 +59,7 @@ modules:
       - fuzzel # application launcher
       - lxpolkit # niri needs a polkit
       - copyq # clipboard manager
+      - playerctl # media player controller
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
