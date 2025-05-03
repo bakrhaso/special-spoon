@@ -7,7 +7,7 @@ description: This is my personal OS image.
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/bazzite-gnome-nvidia-open
-image-version: 41 # latest is also supported if you want new updates ASAP
+image-version: 42 # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
@@ -17,49 +17,52 @@ modules:
       # Apply IP Forwarding before installing Docker to prevent messing with LXC networking
       - sysctl -p
 
-  - type: files
-    files:
-      - source: system
-        destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
+  #  - type: files
+  #    files:
+  #      - source: system
+  #        destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
 
   - type: bling
     install:
       - 1password # password manager
 
-  - type: rpm-ostree
+  - type: dnf
     repos:
-      - 1password.repo
-      - docker-ce.repo
-      - ghostty.repo
-      - terra.repo
-      - vscode.repo
-      - niri.repo
+      files:
+        add:
+          # - 1password.repo
+          - docker-ce.repo
+          - terra.repo
+      copr:
+        enable:
+          # - pgdev/ghostty
+          - alternateved/ghostty
+          - yalter/niri
     install:
-      - micro # terminal text editor
-      - zed # code editor
-      - code # code editor, added for devcontainers
-      - ranger # terminal file explorer
-      - bat # cat alternative
-      - eza # ls alternative
-      - fzf # fuzzy finder
-      - zoxide # kind of like cd
-      - ripgrep # fast grep
-      - tealdeer # get a tldr for commands
-      - docker-ce # docker
-      - docker-ce-cli # docker
-      - containerd.io # docker
-      - docker-buildx-plugin # docker
-      - docker-compose-plugin # docker
-      - firefox # replace flatpak version so 1pass integration works
-      - foot # simple wayland terminal
-      - ghostty # new fancy terminal
-      - terminator # old reliable terminal
-      - niri # scrollable tiling window manager
-      - xwayland-satellite # to launch x11 programs under niri
-      - fuzzel # application launcher
-      - lxpolkit # niri needs a polkit
-      - copyq # clipboard manager
-      - playerctl # media player controller
+      packages:
+        - ghostty # new fancy terminal
+        - niri # scrollable tiling window manager
+        - micro # terminal text editor
+        - ranger # terminal file explorer
+        - bat # cat alternative
+        - eza # ls alternative
+        - fzf # fuzzy finder
+        - zoxide # kind of like cd
+        - ripgrep # fast grep
+        - tealdeer # get a tldr for commands
+        - docker-ce # docker
+        - docker-ce-cli # docker
+        - containerd.io # docker
+        - docker-buildx-plugin # docker
+        - docker-compose-plugin # docker
+        - firefox # replace flatpak version so 1pass integration works
+        - foot # simple wayland terminal
+        - terminator # old reliable terminal
+        - xwayland-satellite # to launch x11 programs under niri
+        - fuzzel # application launcher
+        - lxpolkit # niri needs a polkit
+        - copyq # clipboard manager
+        - playerctl # media player controller
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
@@ -74,7 +77,7 @@ modules:
         - com.spotify.Client # for streaming music
         - com.obsproject.Studio # for streaming from my computer (e.g. to twitch)
         - com.usebottles.bottles # manage wine "flasks"
-#        - com.bitwarden.desktop # password manager
+        # - com.bitwarden.desktop # password manager,  using appimage instead atm since flatpak has broken clipboard
         - org.pulseaudio.pavucontrol # volume control
       remove:
         - org.mozilla.firefox # installed via rpm
@@ -89,7 +92,7 @@ modules:
         - io.missioncenter.MissionCenter
         - io.github.nokse22.Exhibit
         - de.leopoldluley.Clapgrep
-    user: {} # Also add Flathub user repo, but no user packages
+    user: { } # Also add Flathub user repo, but no user packages
 
   - type: systemd
     system:
