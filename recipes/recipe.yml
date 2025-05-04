@@ -64,6 +64,10 @@ modules:
         - copyq # clipboard manager
         - playerctl # media player controller
 
+  - type: rpm-ostree
+    remove:
+      - discover-overlay
+
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
     system:
