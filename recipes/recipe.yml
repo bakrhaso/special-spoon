@@ -61,8 +61,8 @@ modules:
         - xwayland-satellite # to launch x11 programs under niri
         - fuzzel # application launcher
         - lxpolkit # niri needs a polkit
-        - copyq # clipboard manager
         - playerctl # media player controller
+        - pavucontrol # volume control
 
   - type: rpm-ostree
     remove:
@@ -82,7 +82,6 @@ modules:
         - com.obsproject.Studio # for streaming from my computer (e.g. to twitch)
         - com.usebottles.bottles # manage wine "flasks"
         # - com.bitwarden.desktop # password manager,  using appimage instead atm since flatpak has broken clipboard
-        - org.pulseaudio.pavucontrol # volume control
       remove:
         - org.mozilla.firefox # installed via rpm
         # remove all the preinstalled stuff i don't care about
