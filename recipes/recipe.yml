@@ -60,7 +60,7 @@ modules:
         - terminator # old reliable terminal
         - xwayland-satellite # to launch x11 programs under niri
         - fuzzel # application launcher
-        - lxpolkit # niri needs a polkit
+        - lxqt-policykit # niri needs a polkit
         - playerctl # media player controller
         - pavucontrol # volume control
 
