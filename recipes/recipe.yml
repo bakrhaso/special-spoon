@@ -63,6 +63,7 @@ modules:
         - lxqt-policykit # niri needs a polkit
         - playerctl # media player controller
         - pavucontrol # volume control
+        - gnome-tweaks
 
   - type: rpm-ostree
     remove:
