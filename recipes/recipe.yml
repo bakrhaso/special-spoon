@@ -64,6 +64,10 @@ modules:
         - playerctl # media player controller
         - pavucontrol # volume control
         - gnome-tweaks
+    remove:
+      packages:
+        - alacritty # terminal emulator (included by niri i think)
+        - malcontent # parental controls included by gnome
 
   - type: rpm-ostree
     remove:
