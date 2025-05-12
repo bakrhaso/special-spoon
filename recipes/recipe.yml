@@ -39,7 +39,6 @@ modules:
     install:
       packages:
         - ghostty # new fancy terminal
-        - niri # scrollable tiling window manager
         - micro # terminal text editor
         - ranger # terminal file explorer
         - bat # cat alternative
