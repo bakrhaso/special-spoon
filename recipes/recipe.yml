@@ -30,7 +30,6 @@ modules:
     repos:
       files:
         add:
-          # - 1password.repo
           - docker-ce.repo
           - terra.repo
       copr:
