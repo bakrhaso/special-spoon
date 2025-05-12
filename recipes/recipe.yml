@@ -37,7 +37,6 @@ modules:
         enable:
           # - pgdev/ghostty
           - alternateved/ghostty
-          - yalter/niri
     install:
       packages:
         - ghostty # new fancy terminal
@@ -58,15 +57,10 @@ modules:
         - firefox # replace flatpak version so 1pass integration works
         - foot # simple wayland terminal
         - terminator # old reliable terminal
-        - xwayland-satellite # to launch x11 programs under niri
-        - fuzzel # application launcher
-        - lxqt-policykit # niri needs a polkit
-        - playerctl # media player controller
         - pavucontrol # volume control
         - gnome-tweaks
     remove:
       packages:
-        - alacritty # terminal emulator (included by niri i think)
         - malcontent # parental controls included by gnome
 
   - type: rpm-ostree
