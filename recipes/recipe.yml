@@ -58,10 +58,7 @@ modules:
     remove:
       packages:
         - malcontent # parental controls included by gnome
-
-  - type: rpm-ostree
-    remove:
-      - discover-overlay
+        - discover-overlay
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
