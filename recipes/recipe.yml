@@ -105,6 +105,8 @@ modules:
       enabled:
         - docker.socket
         - tailscaled
+        - gnome-shell-suspend # https://github.com/ublue-os/bazzite/issues/2437#issuecomment-2787148851
+        - gnome-shell-resume # https://github.com/ublue-os/bazzite/issues/2437#issuecomment-2787148851
 
   - type: script
     snippets:
