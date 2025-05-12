@@ -53,7 +53,6 @@ modules:
         - docker-buildx-plugin # docker
         - docker-compose-plugin # docker
         - firefox # replace flatpak version so 1pass integration works
-        - terminator # old reliable terminal
         - pavucontrol # volume control
         - gnome-tweaks
     remove:
