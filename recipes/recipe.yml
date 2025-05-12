@@ -94,6 +94,12 @@ modules:
         - de.leopoldluley.Clapgrep
     user: { } # Also add Flathub user repo, but no user packages
 
+  - type: fonts
+    fonts:
+      nerd-fonts:
+        - Hack
+        - Monaspice
+
   - type: systemd
     system:
       enabled:
