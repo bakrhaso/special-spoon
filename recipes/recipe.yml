@@ -93,7 +93,7 @@ modules:
     fonts:
       nerd-fonts:
         - Hack
-        - Monaspice
+        - Monaspace
 
   - type: systemd
     system:
