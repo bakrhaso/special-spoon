@@ -19,8 +19,8 @@ modules:
 
   - type: files
     files:
-      - source: system
-        destination: /
+      - source: executables
+        destination: /bin/user-executables
 
   - type: bling
     install:
